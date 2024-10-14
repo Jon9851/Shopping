@@ -1,0 +1,219 @@
+.productdisplay{
+    display: flex;
+    padding: 0px 10%;
+    gap: 40px;
+    justify-content: space-between;
+}
+.productdisplay-left{
+    display: flex;
+    gap: 18px;
+}
+.productdisplay-img-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.productdisplay-img-list img{
+    height: 110px;
+}
+.productdisplay-main-img{
+    height: 500px;
+}
+.productdisplay-right{
+    display: flex;
+    flex-direction: column;
+}
+.productdisplay-right h1{
+    color: #020202;
+    font-size: 30px;
+    font-weight: 700;
+}
+.productdisplay-right-stars{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 5px;
+    color: #020202;
+    font-size: 14px;
+}
+.productdisplay-right-prices{
+    display: flex;
+    margin: 25px 0px;
+    gap: 20px;
+    font-size: 22px;
+    font-weight: 700;
+}
+.productdisplay-right-price-old{
+    color: #020202;
+    text-decoration: line-through;
+}
+.productdisplay-right-price-new{
+    color: #ff4141;
+}
+.productdisplay-right-size h1{
+    margin-top: 30px;
+    color: #FF4141;
+    font-size: 18px;
+    font-weight: 600;
+}
+.productdisplay-right-sizes{
+    display: flex;
+    margin: 20px 0px;
+    gap: 15px;
+}
+.productdisplay-right-sizes div{
+    padding: 16px 20px;
+    background: #fbfbfb;
+    border: 1px solid #ebebeb;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.productdisplay-right button{
+    padding: 20px 40px;
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    background: #FF4141;
+    margin-bottom: 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.productdisplay-right-category{
+    margin-top: 10px;
+}
+.productdisplay-right-category span{
+    font-weight: 600;
+}
+
+/* ----- media query------- */
+
+
+@media(max-width:1024px){
+    .productdisplay{
+        padding: 0px 8%;
+    }
+    .productdisplay-img-list{
+        gap: 10px;
+    }
+    .productdisplay-img-list img{
+        height: 90px;
+    }
+    .productdisplay-main-img{
+        height: 400px;
+    }
+    
+}
+@media(max-width:900px){
+    .productdisplay{
+        gap: 20px;
+    }
+    .productdisplay-left{
+        gap: 10px;
+    }
+    .productdisplay-img-list{
+        gap: 10px;
+    }
+    .productdisplay-img-list img{
+        height: 80px;
+    }
+    .productdisplay-main-img{
+        height: 350px;
+    }
+    
+}
+@media(max-width:800px){
+    .productdisplay{
+        flex-wrap: wrap;
+    }
+    .productdisplay-left{
+        width: 100%;
+        justify-content: center;
+    }
+}
+@media(max-width:500px){
+    .productdisplay-right h1 {
+        font-size: 20px;
+    }
+    .productdisplay-right-prices {
+        margin: 15px 0;
+        font-size: 18px;
+    }
+    .productdisplay-right-size h1{
+        margin-top: 15px;
+    }
+    .productdisplay-right-size h1{
+        margin: 10px 0;
+    }
+    .productdisplay-right-size div{
+        font-size: 14px;
+    }
+}
+
+/* Popup Notification */
+/* Popup Notification */
+.popup-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, white, #ff4141);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: bounceInOut 3s ease-in-out;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Success Icon (checkmark or any relevant icon) */
+.popup-notification::before {
+    content: '✓';
+    font-size: 20px;
+    background-color: #FF4141;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+/* Close button for control */
+.popup-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding-left: 10px;
+    transition: color 0.2s ease;
+}
+
+.popup-close:hover {
+    color: #f1f1f1;
+}
+
+/* Animation for entry and exit */
+@keyframes bounceInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    90% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+}

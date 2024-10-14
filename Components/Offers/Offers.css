@@ -1,0 +1,109 @@
+.offers{
+    margin: 100px auto;
+    width: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 8%;
+    margin-bottom: 150px;
+    background: linear-gradient(180deg, #fde1ff 0%, #ff4141 60%);;
+}
+
+.offers-left h1{
+    color: #171717;
+    font-size: 60px;
+    font-weight: 600;
+}
+.offers-left p{
+    color: #171717;
+    font-size: 16px;
+    font-weight: 600;
+}
+.offers-left button{
+    width: 230px;
+    height: 60px;
+    border-radius: 35px;
+    background: #020020;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.offers-right img{
+    width: 320px;
+    padding-top: 20px;
+}
+
+/* ----- media query----- */
+
+@media(max-width:1280px){
+    .offers-right img{
+        width: 300px;
+    }
+    .offers-left h1{
+        font-size: 40px;
+    }
+    .offers-left p{
+        font-size: 14px;
+    }
+    .offers-left button{
+        width: 200px;
+        height: 50px;
+        
+        font-size: 18px;
+        margin-top: 25px;
+    }
+}
+@media(max-width:1024px){
+    .offers-right img{
+        width: 200px;
+    }
+}
+
+
+@media(max-width: 900px) {
+    .newsletter h1 {
+        font-size: 30px;
+    }
+
+    .newsletter {
+        gap: 10px;
+    }
+
+    .newsletter div {
+        flex-direction: column; /* Stack input and button vertically */
+        align-items: stretch; /* Make input and button take full width */
+        height: auto;
+    }
+
+    .newsletter input {
+        width: 100%;
+        padding-left: 20px;
+        margin-bottom: 10px;
+    }
+
+    .newsletter div button {
+        width: 100%; /* Make button take full width */
+        height: 50px;
+        border-radius: 25px;
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 500px) {
+    .newsletter {
+        padding: 50px 5%;
+    }
+
+    .newsletter div {
+        width: 100%;
+    }
+
+    .newsletter div button {
+        font-size: 12px;
+        width: 100%;
+    }
+}
